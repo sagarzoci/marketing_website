@@ -70,3 +70,16 @@ nav.addEventListener('mouseover',function(e){
 nav.addEventListener('mouseout', function(e){
     hoverHandle(e, 1)
 })
+
+
+const initilCoordinate = sectionOne.getBoundingClientRect()
+console.log(initilCoordinate);
+
+window.addEventListener("scroll", function(){
+    console.log(this.window.scrollY);
+    
+    if (window.scrollY > initilCoordinate.top){
+        nav.classList.add("sticky")
+    } else nav.classList.remove("sticky")
+
+})
